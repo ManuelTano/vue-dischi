@@ -1,7 +1,7 @@
 <template>
   <div class="disc text-center m-3 col-2 p-3">
     <img class="album" :src="image" />
-    <div class="title">{{ title }}</div>
+    <div class="title mt-2">{{ title }}</div>
     <div class="info">
       {{ author }}
       {{ year }}
@@ -12,12 +12,8 @@
 <script>
 export default {
   name: "MyArtists",
-  props: {
-    poster: String,
-    title: String,
-    author: String,
-    year: String,
-  },
+   props: ["image", "title", "author", "year"],
+
 };
 </script>
 
@@ -26,7 +22,6 @@ export default {
 .disc {
   background-color: $primary-color;
 }
-
 .album {
   width: 90%;
 }

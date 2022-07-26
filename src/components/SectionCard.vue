@@ -1,7 +1,7 @@
 <template>
   <main>
      <div class="container">
-      <div class="disc-card-box row justify-content-between">
+      <div class="row justify-content-between py-5">
         <my-artists
           v-for="(artist, index) in albumsList"
           :key="index"
@@ -46,10 +46,6 @@ export default {
 
 main {
   background-color: $bg-color;
-}
-
-img{
-  width: 100%;
 }
 
 </style> 
