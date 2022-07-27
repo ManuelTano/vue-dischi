@@ -1,5 +1,5 @@
 <template>
-  <div class="disc text-center m-3 col-2 p-3">
+  <div class="disc mx-3 my-4 text-center col-2 p-3">
     <img class="album" :src="image" />
     <div class="title mt-2">{{ title }}</div>
     <div class="info">
