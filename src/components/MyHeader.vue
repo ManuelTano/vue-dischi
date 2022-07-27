@@ -7,21 +7,19 @@
         </div>
       </div>
       <div class="col-2 d-flex text-end h-100 align-items-center">
-        <select class="form-select" name="genre" id="genres">
-          <option value="allGenres" selected>Seleziona un genere</option>
-          <option value="rock">Rock</option>
-          <option value="jazz">Jazz</option>
-          <option value="pop">Pop</option>
-          <option value="metal">Metal</option>
-        </select>
+        <select-genre/>
       </div>
     </div>
   </header>
 </template>
 
 <script>
+import SelectGenre from './SelectGenre.vue'
 export default {
   name: "BaseHeader",
+  components: {
+    SelectGenre
+  }
 };
 </script>
 
