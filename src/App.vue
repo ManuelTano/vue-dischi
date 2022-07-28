@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <MyHeader />
-    <SectionCard />
+    <MyHeader :genres-list="genresList" @genre-change="setSelectedGenre"/>
+    <SectionCard :selected-genre="selectedGenre" @fetched-genres="setGenresList"/>
   </div>
 </template>
 
@@ -13,6 +13,20 @@ export default {
   components: {
     MyHeader,
     SectionCard,
+  },
+  data() {
+    return {
+      selectedGenre: "",
+      genresList: ["Rock", "Pop", "Metal", "Jazz"],
+    };
+  },
+  methods: {
+    setSelectedGenre(genre) {
+      this.selectedGenre = genre; 
+    },
+    setGenresList(genres) {
+      this.genresList = genres;
+    }
   }
 }
 </script>
